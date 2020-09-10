@@ -2,7 +2,7 @@
 This repository contains code written by the Michigan Hackers iOS team
 during Fall 2020.
 
-## Getting Started
+## Prerequisites
 ### Integrated Development Environment (IDE)
 Install Xcode, the official IDE for iOS development.
 An IDE makes developing the application faster and easier.
@@ -18,6 +18,13 @@ Install git, the software our team uses for version control.
 Create a Github account to interact with the remote repository.
 
 [Join](https://github.com/join)
+
+## Quick Start
+```sh
+$ git clone https://github.com/michiganhackers/ios-fitness-tracker.git
+$ cd ios-fitness-tracker/
+$ open FitnessTracker.xcworkspace
+```
 
 ## Project Structure
 
