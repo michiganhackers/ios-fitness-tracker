@@ -16,48 +16,87 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Home View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQZ-1w-vlD" userLabel="Home View">
-                                <rect key="frame" x="118.5" y="426.5" width="177" height="43"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by HomeViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L" userLabel="Loaded by HomeViewController">
-                                <rect key="frame" x="105" y="477.5" width="204" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CbU-vB-AYk" customClass="StartWorkoutButton" customModule="FitnessTracker" customModuleProvider="target">
+                                <rect key="frame" x="107" y="348" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="CbU-vB-AYk" secondAttribute="height" multiplier="1:1" id="RUL-qM-r9v"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="qgB-5k-MxR"/>
+                                </constraints>
+                                <state key="normal" title="Start Workout"/>
+                                <connections>
+                                    <segue destination="DVZ-tQ-RPs" kind="presentation" id="8u3-3a-Mvm"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="6BV-lF-sBN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="KQZ-1w-vlD" secondAttribute="bottom" constant="8" symbolic="YES" id="cfb-er-3JN"/>
-                            <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="KQZ-1w-vlD" secondAttribute="centerX" id="e1l-AV-tCB"/>
-                            <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
+                            <constraint firstItem="CbU-vB-AYk" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="Faw-l4-koC"/>
+                            <constraint firstItem="CbU-vB-AYk" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="foR-Ir-zPu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="first" id="acW-dT-cKf" userLabel="Home"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="acW-dT-cKf" userLabel="Home"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="749.27536231884062" y="-320.08928571428572"/>
+            <point key="canvasLocation" x="749" y="-656"/>
         </scene>
-        <!--View Workout-->
+        <!--Start Workout View Controller-->
+        <scene sceneID="0s4-r8-mGu">
+            <objects>
+                <viewController id="DVZ-tQ-RPs" customClass="StartWorkoutViewController" customModule="FitnessTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hqz-an-tRi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcC-ot-xCc">
+                                <rect key="frame" x="20" y="15" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <segue destination="e8U-Z1-Ap5" kind="unwind" unwindAction="unwindWithUnwindSegue:" id="r9L-je-Hoq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRP-Es-Lip">
+                                <rect key="frame" x="356" y="15" width="38" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="goBack" destination="kj6-5m-Var" eventType="touchUpInside" id="gOT-44-xIw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="qcC-ot-xCc" firstAttribute="leading" secondItem="ylf-lg-w3W" secondAttribute="leading" constant="20" id="BHH-XY-uzZ"/>
+                            <constraint firstItem="lRP-Es-Lip" firstAttribute="top" secondItem="qcC-ot-xCc" secondAttribute="top" id="PZB-sL-BPk"/>
+                            <constraint firstItem="ylf-lg-w3W" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qcC-ot-xCc" secondAttribute="trailing" id="S7u-oO-NIG"/>
+                            <constraint firstItem="ylf-lg-w3W" firstAttribute="trailing" secondItem="lRP-Es-Lip" secondAttribute="trailing" constant="20" id="YbZ-AR-L1o"/>
+                            <constraint firstItem="lRP-Es-Lip" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ylf-lg-w3W" secondAttribute="leading" id="tau-nC-QFw"/>
+                            <constraint firstItem="qcC-ot-xCc" firstAttribute="top" secondItem="ylf-lg-w3W" secondAttribute="top" constant="15" id="wMV-eZ-OAr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ylf-lg-w3W"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kj6-5m-Var" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="e8U-Z1-Ap5" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1528.985507246377" y="-656.25"/>
+        </scene>
+        <!--List Workouts-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" userLabel="View Workout" customClass="ViewWorkoutViewController" customModule="FitnessTracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" userLabel="List Workouts" customClass="ListWorkoutsViewController" customModule="FitnessTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="View Workout View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="58.5" y="426.5" width="297" height="43"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="List Workouts View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
+                                <rect key="frame" x="60" y="426.5" width="294" height="43"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by ViewWorkoutViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="81" y="477.5" width="252" height="17"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by ListWorkoutsTableViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
+                                <rect key="frame" x="65" y="477.5" width="284" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -71,16 +110,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Workout" image="second" id="cPa-gy-q4n" userLabel="Workout"/>
+                    <tabBarItem key="tabBarItem" title="Workouts" image="heart.fill" catalog="system" id="cPa-gy-q4n" userLabel="Workouts"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="748" y="0.0"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ozD-Ia-zf4"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -89,15 +129,52 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="9aG-QB-o9Q" kind="relationship" relationship="viewControllers" id="uvm-33-PHU"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="8HO-2h-Sj5">
+            <objects>
+                <viewController id="9aG-QB-o9Q" userLabel="Settings" customClass="SettingsViewController" customModule="FitnessTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jw3-qR-0nT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Settings View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="TB6-9v-7z3" userLabel="Home View">
+                                <rect key="frame" x="101.5" y="426.5" width="211" height="43"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SettingsViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWm-XY-fCh" userLabel="Loaded by HomeViewController">
+                                <rect key="frame" x="97.5" y="477.5" width="219" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="iWm-XY-fCh" firstAttribute="top" secondItem="TB6-9v-7z3" secondAttribute="bottom" constant="8" symbolic="YES" id="5TJ-5a-A1i"/>
+                            <constraint firstItem="iWm-XY-fCh" firstAttribute="centerX" secondItem="TB6-9v-7z3" secondAttribute="centerX" id="GQY-kA-2u2"/>
+                            <constraint firstAttribute="centerX" secondItem="TB6-9v-7z3" secondAttribute="centerX" id="Pte-v0-v8g"/>
+                            <constraint firstAttribute="centerY" secondItem="TB6-9v-7z3" secondAttribute="centerY" id="dcx-Vd-LyC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ua6-N2-Kel"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="Lz9-3x-oBH" userLabel="Settings"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jp0-V9-v48" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="748" y="660"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="gear" catalog="system" width="128" height="119"/>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
     </resources>
 </document>
