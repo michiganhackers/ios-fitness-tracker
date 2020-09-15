@@ -9,8 +9,10 @@
 import HealthKit
 
 class WorkoutStore {
+    // MARK: - Member variables
     private static let healthStore = HKHealthStore()
     
+    // MARK: - Initializers
     init?() {
         // If health data is not available on the user's device, this class
         // cannot be initialized.
@@ -19,6 +21,7 @@ class WorkoutStore {
         }
     }
     
+    // MARK: - Methods
     func getAll() -> [HKWorkout] {
         // TODO: Fix this to get workouts from the user's HealthKit data.
         return [
