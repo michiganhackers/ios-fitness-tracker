@@ -20,6 +20,7 @@
 		E979640A2508198A0042736B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E97964092508198A0042736B /* Assets.xcassets */; };
 		E979640D2508198A0042736B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E979640B2508198A0042736B /* LaunchScreen.storyboard */; };
 		E9A1470025114FF800553601 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A146FF25114FF800553601 /* HealthKit.framework */; };
+		E9A147022511509400553601 /* WorkoutStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A147012511509400553601 /* WorkoutStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		E979640E2508198A0042736B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9A146FE25114FF800553601 /* FitnessTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FitnessTracker.entitlements; sourceTree = "<group>"; };
 		E9A146FF25114FF800553601 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		E9A147012511509400553601 /* WorkoutStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 		E9B60773250A869600D98129 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E9A147012511509400553601 /* WorkoutStore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				E9796405250819870042736B /* ViewWorkoutViewController.swift in Sources */,
 				E9796403250819870042736B /* HomeViewController.swift in Sources */,
 				E9340019250A97E60090D8D3 /* ListWorkoutsViewController.swift in Sources */,
+				E9A147022511509400553601 /* WorkoutStore.swift in Sources */,
 				E97963FF250819870042736B /* AppDelegate.swift in Sources */,
 				E9796401250819870042736B /* SceneDelegate.swift in Sources */,
 				E934001B250A99070090D8D3 /* SettingsViewController.swift in Sources */,
