@@ -10,8 +10,8 @@
 		69430942BB4B5E2988A29BA0 /* libPods-FitnessTracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F3D058D86F6ED0978533BA5 /* libPods-FitnessTracker.a */; };
 		E9340019250A97E60090D8D3 /* ListWorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9340018250A97E60090D8D3 /* ListWorkoutsViewController.swift */; };
 		E934001B250A99070090D8D3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E934001A250A99070090D8D3 /* SettingsViewController.swift */; };
-		E934001D250A9D880090D8D3 /* StartWorkoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E934001C250A9D880090D8D3 /* StartWorkoutButton.swift */; };
-		E934001F250A9DDB0090D8D3 /* StartWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E934001E250A9DDB0090D8D3 /* StartWorkoutViewController.swift */; };
+		E934001D250A9D880090D8D3 /* StartRunButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E934001C250A9D880090D8D3 /* StartRunButton.swift */; };
+		E934001F250A9DDB0090D8D3 /* CurrentRunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E934001E250A9DDB0090D8D3 /* CurrentRunViewController.swift */; };
 		E97963FF250819870042736B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97963FE250819870042736B /* AppDelegate.swift */; };
 		E9796401250819870042736B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9796400250819870042736B /* SceneDelegate.swift */; };
 		E9796403250819870042736B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9796402250819870042736B /* HomeViewController.swift */; };
@@ -30,8 +30,8 @@
 		9F3D058D86F6ED0978533BA5 /* libPods-FitnessTracker.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FitnessTracker.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9340018250A97E60090D8D3 /* ListWorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWorkoutsViewController.swift; sourceTree = "<group>"; };
 		E934001A250A99070090D8D3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		E934001C250A9D880090D8D3 /* StartWorkoutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartWorkoutButton.swift; sourceTree = "<group>"; };
-		E934001E250A9DDB0090D8D3 /* StartWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartWorkoutViewController.swift; sourceTree = "<group>"; };
+		E934001C250A9D880090D8D3 /* StartRunButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartRunButton.swift; sourceTree = "<group>"; };
+		E934001E250A9DDB0090D8D3 /* CurrentRunViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRunViewController.swift; sourceTree = "<group>"; };
 		E97963FB250819870042736B /* FitnessTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E97963FE250819870042736B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9796400250819870042736B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 				E9796404250819870042736B /* ViewWorkoutViewController.swift */,
 				E9340018250A97E60090D8D3 /* ListWorkoutsViewController.swift */,
 				E934001A250A99070090D8D3 /* SettingsViewController.swift */,
-				E934001E250A9DDB0090D8D3 /* StartWorkoutViewController.swift */,
+				E934001E250A9DDB0090D8D3 /* CurrentRunViewController.swift */,
 				E9A147052513122900553601 /* RecordWorkoutViewController.swift */,
 			);
 			path = Controllers;
@@ -128,7 +128,7 @@
 		E9B60774250A869B00D98129 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E934001C250A9D880090D8D3 /* StartWorkoutButton.swift */,
+				E934001C250A9D880090D8D3 /* StartRunButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -247,8 +247,8 @@
 				E97963FF250819870042736B /* AppDelegate.swift in Sources */,
 				E9796401250819870042736B /* SceneDelegate.swift in Sources */,
 				E934001B250A99070090D8D3 /* SettingsViewController.swift in Sources */,
-				E934001F250A9DDB0090D8D3 /* StartWorkoutViewController.swift in Sources */,
-				E934001D250A9D880090D8D3 /* StartWorkoutButton.swift in Sources */,
+				E934001F250A9DDB0090D8D3 /* CurrentRunViewController.swift in Sources */,
+				E934001D250A9D880090D8D3 /* StartRunButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

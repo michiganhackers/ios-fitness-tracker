@@ -15,10 +15,16 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    // MARK: - IBActions and IBOutlets
+    // MARK: - Navigation
     
     // This method allows modal view controllers to dismiss themselves when
     // presented from this view controller.
     @IBAction func unwind(unwindSegue: UIStoryboardSegue) {}
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let currentRunVC = segue.destination as? CurrentRunViewController {
+            currentRunVC.startWorkout()
+        }
+    }
 }
 

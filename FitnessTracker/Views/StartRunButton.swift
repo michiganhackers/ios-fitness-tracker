@@ -1,5 +1,5 @@
 //
-//  StartWorkoutButton.swift
+//  StartRunButton.swift
 //  FitnessTracker
 //
 //  Created by Thomas Smith on 9/10/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StartWorkoutButton: UIButton {
+class StartRunButton: UIButton {
     // MARK: - Initializers
     override init(frame: CGRect) {
         super.init(frame: frame)
