@@ -1,14 +1,14 @@
 //
-//  StartWorkoutViewController.swift
+//  RecordWorkoutViewController.swift
 //  FitnessTracker
 //
-//  Created by Thomas Smith on 9/10/20.
+//  Created by Thomas Smith on 9/16/20.
 //  Copyright © 2020 Michigan Hackers. All rights reserved.
 //
 
 import UIKit
 
-class StartWorkoutViewController: UIViewController {
+class RecordWorkoutViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet var startButton: UIButton!

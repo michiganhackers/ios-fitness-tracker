@@ -21,6 +21,7 @@
 		E979640D2508198A0042736B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E979640B2508198A0042736B /* LaunchScreen.storyboard */; };
 		E9A1470025114FF800553601 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A146FF25114FF800553601 /* HealthKit.framework */; };
 		E9A147022511509400553601 /* WorkoutStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A147012511509400553601 /* WorkoutStore.swift */; };
+		E9A147062513122A00553601 /* RecordWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A147052513122900553601 /* RecordWorkoutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		E9A146FE25114FF800553601 /* FitnessTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FitnessTracker.entitlements; sourceTree = "<group>"; };
 		E9A146FF25114FF800553601 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		E9A147012511509400553601 /* WorkoutStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutStore.swift; sourceTree = "<group>"; };
+		E9A147052513122900553601 /* RecordWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordWorkoutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				E9340018250A97E60090D8D3 /* ListWorkoutsViewController.swift */,
 				E934001A250A99070090D8D3 /* SettingsViewController.swift */,
 				E934001E250A9DDB0090D8D3 /* StartWorkoutViewController.swift */,
+				E9A147052513122900553601 /* RecordWorkoutViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9796405250819870042736B /* ViewWorkoutViewController.swift in Sources */,
+				E9A147062513122A00553601 /* RecordWorkoutViewController.swift in Sources */,
 				E9796403250819870042736B /* HomeViewController.swift in Sources */,
 				E9340019250A97E60090D8D3 /* ListWorkoutsViewController.swift in Sources */,
 				E9A147022511509400553601 /* WorkoutStore.swift in Sources */,

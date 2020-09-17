@@ -26,10 +26,21 @@
                                     <segue destination="DVZ-tQ-RPs" kind="presentation" id="8u3-3a-Mvm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jX-um-UiB">
+                                <rect key="frame" x="151.5" y="548" width="111" height="200"/>
+                                <state key="normal" title="Record Workout"/>
+                                <connections>
+                                    <segue destination="NDn-qZ-cVw" kind="presentation" id="4nS-XS-vE7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="5jX-um-UiB" firstAttribute="centerX" secondItem="CbU-vB-AYk" secondAttribute="centerX" id="3KM-UW-oPA"/>
+                            <constraint firstItem="5jX-um-UiB" firstAttribute="width" secondItem="CbU-vB-AYk" secondAttribute="width" multiplier="0.555" id="8dE-BP-wLA"/>
                             <constraint firstItem="CbU-vB-AYk" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" id="Faw-l4-koC"/>
+                            <constraint firstItem="5jX-um-UiB" firstAttribute="top" secondItem="CbU-vB-AYk" secondAttribute="bottom" id="TNV-h9-6YU"/>
+                            <constraint firstItem="5jX-um-UiB" firstAttribute="height" secondItem="CbU-vB-AYk" secondAttribute="height" id="eVu-2y-IpV"/>
                             <constraint firstItem="CbU-vB-AYk" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="foR-Ir-zPu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
@@ -59,9 +70,6 @@
                                 <rect key="frame" x="356" y="15" width="38" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Start"/>
-                                <connections>
-                                    <action selector="goBack" destination="kj6-5m-Var" eventType="touchUpInside" id="gOT-44-xIw"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -75,11 +83,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ylf-lg-w3W"/>
                     </view>
+                    <connections>
+                        <outlet property="startButton" destination="lRP-Es-Lip" id="s9j-zl-Oyz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kj6-5m-Var" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="e8U-Z1-Ap5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1528.985507246377" y="-656.25"/>
+            <point key="canvasLocation" x="1525" y="-1033"/>
         </scene>
         <!--List Workouts View Controller-->
         <scene sceneID="T2A-sy-a2k">
@@ -109,6 +120,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WnW-l2-eLH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="748" y="1"/>
+        </scene>
+        <!--Record Workout View Controller-->
+        <scene sceneID="aFA-ux-awT">
+            <objects>
+                <viewController id="NDn-qZ-cVw" customClass="RecordWorkoutViewController" customModule="FitnessTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bH1-8g-5Lv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GgI-yC-VFy">
+                                <rect key="frame" x="20" y="15" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <segue destination="wWL-LS-fvo" kind="unwind" unwindAction="unwindWithUnwindSegue:" id="Nbz-a4-kOj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWT-sv-PwK">
+                                <rect key="frame" x="356" y="15" width="38" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Start"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="GgI-yC-VFy" firstAttribute="leading" secondItem="FYe-2B-8Bu" secondAttribute="leading" constant="20" id="6MH-h5-W2U"/>
+                            <constraint firstItem="fWT-sv-PwK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="FYe-2B-8Bu" secondAttribute="leading" id="6TU-fQ-gMC"/>
+                            <constraint firstItem="FYe-2B-8Bu" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="GgI-yC-VFy" secondAttribute="trailing" id="CO9-VX-nNi"/>
+                            <constraint firstItem="GgI-yC-VFy" firstAttribute="top" secondItem="FYe-2B-8Bu" secondAttribute="top" constant="15" id="QrL-Am-iPj"/>
+                            <constraint firstItem="FYe-2B-8Bu" firstAttribute="trailing" secondItem="fWT-sv-PwK" secondAttribute="trailing" constant="20" id="eFk-s6-l0a"/>
+                            <constraint firstItem="fWT-sv-PwK" firstAttribute="top" secondItem="GgI-yC-VFy" secondAttribute="top" id="zgC-9T-v0X"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FYe-2B-8Bu"/>
+                    </view>
+                    <connections>
+                        <outlet property="startButton" destination="fWT-sv-PwK" id="Cu1-Xg-ztB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rfU-H6-g0O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="wWL-LS-fvo" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1525" y="-360"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
