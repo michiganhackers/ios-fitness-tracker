@@ -19,7 +19,9 @@ class CurrentRunViewController: UIViewController {
     // MARK: - IBOutlets and IBActions
     // TODO: Add an IBAction that is called when the "End" button is tapped.
     // In this method, stop tracking the workout and record its data.
-
+    @IBAction func endWorkout(_ sender: Any) {
+    }
+    
     // MARK: - View event handlers
     override func viewDidLoad() {
         super.viewDidLoad()
