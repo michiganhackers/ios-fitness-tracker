@@ -11,6 +11,9 @@ import MapKit
 
 class CurrentRunViewController: UIViewController {
     
+    
+    //MARK: - Properties
+    let locationManager = CLLocationManager()
     // MARK: - Methods
     func startWorkout() {
         // TODO: Start tracking the workout. Record the current time, start
@@ -20,6 +23,16 @@ class CurrentRunViewController: UIViewController {
     
     
     //Location services
+    
+    func checkLocationServices() {
+      if CLLocationManager.locationServicesEnabled() {
+        checkLocationAuthorization()
+      } else {
+        // Show alert letting the user know they have to turn this on.
+      }
+    }
+    
+    
     func checkLocationAuthorization() {
       switch CLLocationManager.authorizationStatus() {
       case .authorizedWhenInUse:
@@ -27,7 +40,7 @@ class CurrentRunViewController: UIViewController {
       case .denied: // Show alert telling users how to turn on permissions
         break
       case .notDetermined:
-        //locationManager.requestWhenInUseAuthorization()
+        locationManager.requestWhenInUseAuthorization()
         mapView.showsUserLocation = true
       case .restricted: // Show an alert letting them know what’s up
        break
@@ -48,13 +61,7 @@ class CurrentRunViewController: UIViewController {
     // MARK: - View event handlers
     override func viewDidLoad() {
         super.viewDidLoad()
-        let locationManager = CLLocationManager()
-        
-        if CLLocationManager.locationServicesEnabled() {
-            mapView.showsUserLocation = true
-        } else {
-           // Do something to let users know why they need to turn it on.
-        }
+        checkLocationServices()
         
     }
 }
