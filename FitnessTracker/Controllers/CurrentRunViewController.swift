@@ -62,6 +62,5 @@ class CurrentRunViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         checkLocationServices()
-        
     }
 }
