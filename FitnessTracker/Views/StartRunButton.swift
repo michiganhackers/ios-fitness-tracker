@@ -22,11 +22,13 @@ class StartRunButton: UIButton {
     
     private func initializeLayout() {
         // TODO: Fix the background color — it looks pretty ugly.
-        backgroundColor = .green
+        backgroundColor = .yellow
         
         // TODO: Change the title color with setTitleColor(color:for:)
+        setTitleColor(.blue, for: UIControl.State.normal)
         
         // TODO: Change the titleLabel's font to be bold and a bigger size
+        titleLabel?.font = UIFont.boldSystemFont(ofSize: 60)
         
         // This makes the button circular
         layer.cornerRadius = frame.width / 2
