@@ -12,6 +12,11 @@ class CurrentRunViewController: UIViewController {
     
     // MARK: - Methods
     func startWorkout() {
+        let currentDateTime = Date()
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: date)
+        let minute = calendar.component(.minute, from: date)
+        let second = calendar.component(.second, from: date)
         // TODO: Start tracking the workout. Record the current time, start
         // tracking GPS, etc.
     }
